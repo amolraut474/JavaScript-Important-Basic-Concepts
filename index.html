@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -552,14 +553,99 @@
       let Array_M10 = ["A1", "A2", "A3", "A4", "A5"];
       document.write("<br>");
       document.write(Array_M10.indexOf("A4"));
-
+      document.write("<br>");
 
       /*
      IMP:-(12)***************************Object********************************** 
-        IMP:-(*1*)single dimensional array. 
+        IMP:-(*1*)single dimensional object. 
         
           // ex
         */
+      document.write("***Object***");
+      document.write("<br>");
+      let obj = {
+         Fname: "ABC1",
+         Mname: "ABC2",
+         Lname: "ABC3"
+      }
+      document.write(obj.Fname);
+      document.write("<br>");
+      for (let sing in obj) {
+         document.write(obj[sing]);
+         document.write("<br>");
+
+      }
+      /*
+       IMP:-(*1*)Multi dimensional object. 
+       // ex
+       */
+      let obj2 = {
+         Ename1: "AAA1",
+         Lname1: "AAA2",
+         Sname1: "AAA3",
+         objm: {
+            Ename2: "AAA1",
+            Lname2: "AAA2",
+            Sname2: "AAA3"
+         }
+
+      }
+      document.write(obj2.objm.Ename2);
+      document.write("<br>");
+
+      /*
+      IMP:-(*1*)Object function and this. 
+      // ex
+      */
+      document.write("***Object function and this keyword. ***");
+      document.write("<br>");
+      let obj3 = {
+         Fname: "F1F1F1",
+         FLname: "F2F2F2",
+         Fullname: function () {
+            // document.write("Fullname:-", "A1A1A1" + "B1B1B1");
+            return this.Fname + this.FLname;
+         }
+      }
+      document.write("Fullname:-", obj3.Fullname());
+      document.write("<br>");
+      /*
+        IMP:-(*1*)JavaScript Object table.
+         // ex
+        */
+      let Otable = {
+         Tno: 1,
+         Tname: "T1 T2 T3",
+         Tmname: "T2 T3 T4",
+         Tlname: "T5 T6 T7",
+         Ttotal: 100
+      }
+      document.write("<table border='1'>");
+      for (let T in Otable) {
+         document.write("<tr>");
+         document.write("<td>");
+         document.write([T]);
+         document.write("</td>");
+         document.write("<td>");
+         document.write(Otable[T]);
+         document.write("</td>");
+         document.write("</tr>");
+         document.write("<br>");
+      }
+      document.write("</table>");
+
+      /*
+          IMP:-(*1*)JavaScript Object Constructors 
+          // ex
+          */
+      document.write("***JavaScript Object Constructors ***");
+      document.write("<br>");
+      function Userdata(Un, Ul) {
+         this.Uname = Un;
+         this.Ulname = Ul;
+      }
+      var Consob1 = new Userdata("AAA", "AAA");
+      console.log(Consob1);
    </script>
 </body>
 
