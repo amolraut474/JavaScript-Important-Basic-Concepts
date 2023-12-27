@@ -650,7 +650,7 @@
        document.write("<br>");
        document.write("<br>");
 
-       /*
+   /*
             IMP:-(*1*)Advanced Javascript important topics/ES6
             // 1 var, let, const,
             // ex
@@ -764,6 +764,7 @@
         :-If we want a particular item, then we need to use Array destructuring create a variable and assign a value for that.
         // ex:-1
      */
+        //********************Old method********************
         document.write("<br>");
         document.write("*** Object destructuring ***");
         document.write("<br>");
@@ -779,6 +780,7 @@
         document.write("<br>");
         document.write(name, mname, lname);
 
+        //********************New method********************
         document.write("<br>");
         document.write("<br>");
         document.write("*** New method ***");
@@ -790,6 +792,34 @@
         document.write("<br>");
         let { Name, Mname, Lname } = objdestN;
         document.write(Name, Mname, Lname);
+
+        /*
+          IMP:-(*6*)imp Fat Arrow Function :- 
+            Arrow Function does not need to use the function keyword,
+            and if we have one parameter,we do not need to use the Parentheses.
+             Also, if we have only one statement to print, we do not need to use return also {}.
+        // ex:-1
+      */
+        //********************Old Function********************
+        document.write("<br>");
+        document.write("*** Arrow Function ***");
+        document.write("<br>");
+        document.write("*** Old method ***");
+        function arrow1(a) {
+            return a;
+        }
+        document.write("<br>");
+        document.write("Old Function");
+
+        //********************New Function********************
+        document.write("<br>");
+        document.write("*** Arrow Function ***");
+        document.write("<br>");
+        document.write("*** New method ***");
+        let arrow2 = a => 'Arrow Function';
+        document.write("<br>");
+        document.write(arrow2());
+        document.write("<br>");
 
    </script>
 </body>
