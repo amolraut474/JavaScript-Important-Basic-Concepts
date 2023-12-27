@@ -646,6 +646,150 @@
       }
       var Consob1 = new Userdata("AAA", "AAA");
        document.write(Consob1);
+       console.log(Consob1);
+
+
+       /*
+            IMP:-(*1*)Advanced Javascript important topics/ES6
+            // 1 var, let, const,
+            // ex
+         */
+        document.write("*** Advanced Javascript important topics/ES6 ***");
+        document.write("<br>");
+
+        let letname;
+        document.write("let", letname);
+
+        document.write("<br>");
+
+        var varname1;
+        document.write("var", varname1);
+
+        document.write("<br>");
+
+        document.write("*** const:-This is required to pass the value. If we are not passing any value to the variable, this is showing an error. ***");
+        //   const:-This is required to pass the value. If we are not passing any value to the variable, this is showing an error.
+        // const name2;
+        document.write("<br>");
+        const constname2 = 10;
+        document.write(constname2);
+
+        document.write("<br>");
+        /*
+          IMP:-(*2*)Imp template literals
+          // ex
+       */
+        document.write("*** template literals***");
+        document.write("<br>");
+        let Tep = "20";
+        document.write(" Hello, this is your token number " + Tep);
+        document.write("<br>");
+        document.write(`Using template literals output :- Hello, this is your token number  ${Tep}`);
+        document.write("<br>");
+        /*
+         IMP:-(*2*)imp Rest parmeter / (...) Operator
+         :-If we have a default value and we want to add multiple parameters, in this case, we can use the rest parameter.
+         // ex:-1
+      */
+        document.write("*** Rest parmeter ***");
+        document.write("<br>");
+        function restpara(...rp) {
+            document.write(rp);
+        }
+        restpara(20, 20, 30, 40);
+        document.write("<br>");
+
+        /*
+         IMP:-(*3*)imp Rest parmeter / (...) Operator
+         :-ex 2 addition of the parameters.
+         // ex:-1
+      */
+        document.write("<br>");
+        function restpara2(...Padd) {
+            let sum = 0;
+            for (i = 0; i < Padd.length; i++) {
+                sum = sum + Padd[i];
+
+            }
+            document.write(sum);
+
+
+        }
+        restpara2(10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+        document.write("<br>");
+
+        /*
+         IMP:-(*4*)imp Spread Operator / (...) Operator
+         :-If we want to concatenate two arrays, we can use the spread operator.
+         // ex:-1
+      */
+        document.write("<br>");
+        document.write("*** Spread Operator ***");
+        document.write("<br>");
+        let Sopearr1 = [1, 2, 3, 4, 5];
+        let Sopearr2 = [...Sopearr1, 7, 8, 9, 10];
+        document.write(Sopearr2);
+        document.write("<br>");
+
+
+        /*
+        IMP:-(*5*)imp Array destructuring
+        :-If we want a particular item, then we need to use Array destructuring create a variable and assign a value for that.
+        // ex:-1
+     */
+        document.write("<br>");
+        document.write("*** Array destructuring ***");
+        document.write("<br>");
+        document.write("*** Old method ***");
+        document.write("<br>");
+        let arrdest = ["ABC", "XYZ", 20];
+        let arrin1 = arrdest[0];
+        let arrin2 = arrdest[1];
+        let arrin3 = arrdest[2];
+        document.write(arrin1, arrin2, arrin3);
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("*** New method ***");
+        let arrdestN = ["ABC", "XYZ", 20];
+        let [arrinN1, arrinN2, arrinN3] = arrdestN;
+        document.write("<br>");
+        document.write(arrinN1, arrinN2, arrinN3);
+
+
+        document.write("<br>");
+        /*
+        IMP:-(*5*)imp Array destructuring
+        :-If we want a particular item, then we need to use Array destructuring create a variable and assign a value for that.
+        // ex:-1
+     */
+        document.write("<br>");
+        document.write("*** Object destructuring ***");
+        document.write("<br>");
+        document.write("*** Old method ***");
+        let objdest = {
+            Name: "ABC",
+            Mname: "XYZ",
+            Lname: "EFG"
+        }
+        let name = objdest.Name;
+        let mname = objdest.Mname;
+        let lname = objdest.Lname;
+        document.write("<br>");
+        document.write(name, mname, lname);
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("*** New method ***");
+        let objdestN = {
+            Name: "ABC",
+            Mname: "XYZ",
+            Lname: "EFG"
+        }
+        document.write("<br>");
+        let { Name, Mname, Lname } = objdestN;
+        document.write(Name, Mname, Lname);
+
    </script>
 </body>
 
